@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import Stacks from "./Stacks"
-import type { IStack } from "../types/StackType";
+import Stacks from "./stacks/Stacks"
+import type { IStack } from "../../types/StackType";
 
 
 const fetchStacks = async (): Promise<IStack[]> => {
