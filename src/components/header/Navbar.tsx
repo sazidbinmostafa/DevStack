@@ -2,7 +2,7 @@ import logo from "../../assets/logo-text.png"
 
 const NavMenu = () => {
     return <>
-        <li><a className="text-[#DB2777]">Home</a></li>
+        <li><a href="#" className="text-[#DB2777]">Home</a></li>
         <li><a className="text-[#475569]">Technologies</a></li>
         <li><a className="text-[#475569]">Projects</a></li>
         <li><a className="text-[#475569]">About</a></li>

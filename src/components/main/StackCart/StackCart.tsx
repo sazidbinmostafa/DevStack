@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { IStack } from "../../../types/StackType"
 import StackCard from "./StackCard";
+import { toast } from "react-toastify";
 
 
 
@@ -11,6 +12,11 @@ interface Props {
 
 
 function StackCart({ selectedStacks, setSelectedStacks }: Props) {
+
+    const handleOnClick = () => {
+        setSelectedStacks([])
+        toast.error("All technologies are removed from Stack")
+    }
 
     return (
         <div className="card bg-base-100 w-96 mx-auto md:mx-0 md:w-72 shadow-sm h-fit my-8">
@@ -28,7 +34,7 @@ function StackCart({ selectedStacks, setSelectedStacks }: Props) {
                     selectedStacks.map(item => <StackCard key={item.id} stack={item} selectedStacks={selectedStacks} setSelectedStacks={setSelectedStacks} />)
                 }
                 {
-                    selectedStacks.length > 0 ? <button onClick={() => setSelectedStacks([])} className="btn btn-soft btn-error w-full">Remove All</button> : <></>
+                    selectedStacks.length > 0 ? <button onClick={handleOnClick} className="btn btn-soft btn-error w-full">Remove All</button> : <></>
                 }
             </div>
         </div>

@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { IStack } from "../../../types/StackType"
+import { toast } from "react-toastify";
 
 interface StackProps {
     stack: IStack;
@@ -12,6 +13,7 @@ function StackCard({ stack, selectedStacks, setSelectedStacks }: StackProps) {
     const handleOnClick = () =>{
         const remainingStacks = selectedStacks.filter(s=> s.id !== stack.id)
         setSelectedStacks(remainingStacks)
+        toast.warning(`${stack.name} is removed from stack`)
     }
 
     return (

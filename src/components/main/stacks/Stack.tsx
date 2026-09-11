@@ -1,6 +1,7 @@
 import { useState, type Dispatch, type SetStateAction } from "react";
 import type { IStack } from "../../../types/StackType"
 import { IoStar } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 
 interface StackProps {
@@ -18,6 +19,7 @@ function Stack({ stack, selectedStacks, setSelectedStacks }: StackProps) {
     const handleOnClick = () => {
         if (!added) {
             setSelectedStacks([...selectedStacks, stack])
+            toast.success(`${stack.name} added to stack`)
         }
     }
     return (
