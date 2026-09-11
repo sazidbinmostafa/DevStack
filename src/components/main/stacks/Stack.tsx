@@ -1,12 +1,25 @@
+import { useState, type Dispatch, type SetStateAction } from "react";
 import type { IStack } from "../../../types/StackType"
 import { IoStar } from "react-icons/io5";
 
 
 interface StackProps {
     stack: IStack;
+    selectedStacks: IStack[];
+    setSelectedStacks: Dispatch<SetStateAction<IStack[]>>;
 }
 
-function Stack({ stack }: StackProps) {
+function Stack({ stack, selectedStacks, setSelectedStacks }: StackProps) {
+
+
+    const added = selectedStacks.some((s) => s.id === stack.id);
+
+
+    const handleOnClick = () => {
+        if (!added) {
+            setSelectedStacks([...selectedStacks, stack])
+        }
+    }
     return (
         <div className="card bg-base-100 w-96 shadow-sm md:w-72">
             <div className="card-body space-y-1">
@@ -22,7 +35,7 @@ function Stack({ stack }: StackProps) {
                     <div className="flex gap-1 items-center text-[#F59E0B]"><IoStar></IoStar> {stack.rating}</div>
                 </div>
                 <div className="card-actions">
-                    <button className="btn text-white bg-[#111827] w-full text-sm rounded-lg">Add to Stack</button>
+                    <button onClick={handleOnClick} className={added ? "btn btn-soft w-full text-sm rounded-lg btn-disabled pointer-events-auto cursor-not-allowed" : "btn text-white bg-[#111827] w-full text-sm rounded-lg"}>{added ? "Added to Stack" : "Add to Stack"}</button>
                 </div>
             </div>
         </div>

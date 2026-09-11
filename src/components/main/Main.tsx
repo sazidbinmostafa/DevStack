@@ -1,6 +1,7 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Stacks from "./stacks/Stacks"
 import type { IStack } from "../../types/StackType";
+import StackCart from "./StackCart/StackCart";
 
 
 const fetchStacks = async (): Promise<IStack[]> => {
@@ -9,10 +10,11 @@ const fetchStacks = async (): Promise<IStack[]> => {
     return (data)
 }
 
+const stacksPromise = fetchStacks();
 
 function Main() {
 
-    const stacksPromise = fetchStacks();
+    const [selectedStacks, setSelectedStacks] = useState<IStack[]>([])
 
     return (
         <div className="inter container mx-auto">
@@ -20,10 +22,11 @@ function Main() {
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold lg:font-extrabold">Explore the <span className="brand-text">Technologies</span></h1>
                 <p className="text-[#475569] plus-jakarta-sans">Pick one technology per category to build your ideal stack.</p>
             </div>
-            <div>
-                <Suspense>
-                    <Stacks stacksPromise={stacksPromise}/>
+            <div className="lg:flex justify-between">
+                <Suspense fallback={"Loading..."}>
+                    <Stacks stacksPromise={stacksPromise} selectedStacks={selectedStacks} setSelectedStacks={setSelectedStacks}/>
                 </Suspense>
+                <StackCart selectedStacks={selectedStacks} setSelectedStacks={setSelectedStacks} />
             </div>
         </div>
     )
