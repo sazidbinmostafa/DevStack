@@ -1,14 +1,14 @@
 import { ToastContainer } from 'react-toastify'
 import './App.css'
-import Navbar from './components/Navbar'
+import Header from './components/Header'
 
 function App() {
 
   return (
     <>
       <ToastContainer />
-      <div className='plus-jakarta-sans'>
-        <Navbar />
+      <div className='inter'>
+        <Header/>
       </div>
     </>
   )
