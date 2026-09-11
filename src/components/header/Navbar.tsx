@@ -12,7 +12,7 @@ const NavMenu = () => {
 
 function Navbar() {
     return (
-        <div className="shadow-sm plus-jakarta-sans w-full bg-base-100">
+        <div className="shadow-sm plus-jakarta-sans fixed left-0 top-0 z-50 bg-base-100 mb-14 w-full">
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">

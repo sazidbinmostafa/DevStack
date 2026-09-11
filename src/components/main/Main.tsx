@@ -23,7 +23,7 @@ function Main() {
                 <p className="text-[#475569] plus-jakarta-sans">Pick one technology per category to build your ideal stack.</p>
             </div>
             <div className="lg:flex justify-between">
-                <Suspense fallback={"Loading..."}>
+                <Suspense fallback={<span className="loading loading-dots loading-lg"></span>}>
                     <Stacks stacksPromise={stacksPromise} selectedStacks={selectedStacks} setSelectedStacks={setSelectedStacks}/>
                 </Suspense>
                 <StackCart selectedStacks={selectedStacks} setSelectedStacks={setSelectedStacks} />

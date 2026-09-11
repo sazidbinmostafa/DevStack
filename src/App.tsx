@@ -9,9 +9,11 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <header><Header></Header></header>
-      <main><Main></Main></main>
-      <footer><Footer/></footer>
+      <>
+        <header><Header></Header></header>
+        <main><Main></Main></main>
+        <footer><Footer /></footer>
+      </>
     </>
   )
 }

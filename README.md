@@ -9,14 +9,14 @@
 * Tailwind CSS & DaisyUI
 * JavaScript (ES6+)
 * TypeScript
+* Firebase Hosting
 * React-Toastify
 
 ## ✨ 3 Core Features
 
 1. **Dynamic Technology Catalog:** Browse through a responsive 3-column grid of tools, frameworks, and databases complete with ratings, difficulty tiers, category badges, and interactive stack-adding states.
 2. **Interactive Stack Sidebar:** Instantly curate your custom developer stack with duplicate validation, live item counts, individual item removal, and a clear-all action.
-3. **Toast Notifications:** Integrated instant popup alerts powered by `react-toastify` for every stack manipulation.
-
+3. **Loading status & Toast Notifications:** Integrated loading status for data retrieval and instant popup alerts powered by `react-toastify` for every stack manipulation.
 
 
 

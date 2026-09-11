@@ -1,3 +1,7 @@
+:root{
+  scroll-behavior: smooth;
+}
+
 /* Brand Color */
 .brand{
   background: linear-gradient(45deg, #FF5722, #D81B7E, #7C3AED);
