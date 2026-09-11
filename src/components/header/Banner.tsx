@@ -3,7 +3,7 @@ import bannerStack from "../../assets/banner-stack.png"
 
 function Banner() {
     return (
-        <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-5 items-center md:gap-10 text-center md:text-start my-10 justify-between ">
+        <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-5 items-center md:gap-10 text-center md:text-start mt-20 mb-10 justify-between ">
             <div className="space-y-5 lg:col-span-3">
                 <h1 className="text-3xl lg:text-6xl font-extrabold">
                     Build Your Ideal <br />
