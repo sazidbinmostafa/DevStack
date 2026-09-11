@@ -9,7 +9,7 @@ function Banner() {
                     Build Your Ideal <br />
                     <span className="brand-text">Development Stack</span>
                 </h1>
-                <p className="text-[#475569] text-wrap md:text-lg">
+                <p className="text-[#475569] text-wrap md:text-lg plus-jakarta-sans">
                     Explore frontend, backend, database, and tooling options,
                     compare them side by side, and put together the stack that fits your
                     next project.
